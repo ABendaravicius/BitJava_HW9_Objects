@@ -25,13 +25,15 @@ public class LoopInObjectArr {
         // Element min -> max sort
         for (int i = 0; i < employees.length; i++) {
             minIdx = i;
+            minSalary = employees[i].getSalary();
+
             for (int j = i + 1;j < employees.length; j++) {
 
-                minSalary = employees[i].getSalary();
                 currentSalary = employees[j].getSalary();
 
                 if (currentSalary < minSalary) {
                     minIdx = j;
+                    minSalary = currentSalary;
                 }
             }
             System.out.println("... keiciamas");
